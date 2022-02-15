@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #FFF;
   --main-font-color: #333;
+  --header-bg: hsla(0, 100%, 100%, 1);
 }
 
 * {
@@ -28,9 +29,42 @@ body {
 
 /*
 -------------------------------------------------------------------
-YOUR SECTIONS
+HEADER
 -------------------------------------------------------------------
 */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 5vh;
+    background-color: var(--header-bg);
+}
+
+h1 {
+
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+}
+
+/*
+-------------------------------------------------------------------
+HERO
+-------------------------------------------------------------------
+*/
+
+#hero {
+    width: 100vw;
+    height: 60vh;
+    background-color: hsla(45, 75%, 90%, 1);
+}
 
 /*
 -------------------------------------------------------------------
