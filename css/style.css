@@ -24,7 +24,7 @@ body {
     margin:0;
 	padding:0;
 	color: var(--main-font-color);
-
+	font-family: 'Cabin', sans-serif;
 }
 
 /*
@@ -34,24 +34,29 @@ HEADER
 */
 
 header {
+	position: relative;
+	padding: 2vmin;
+	z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 5vh;
     background-color: var(--header-bg);
+	box-shadow: 0 1.5vh 12px -12px #999;
 }
 
 h1 {
-
+	white-space: nowrap;
+	font-family: 'Licorice', cursive;
 }
 
 ul {
     list-style: none;
-}
-
-li {
-    display: inline;
+	width: 100%;
+	display: flex;
+	gap: 3vw;
+	justify-content: flex-end;
 }
 
 /*
@@ -64,6 +69,39 @@ HERO
     width: 100vw;
     height: 60vh;
     background-color: hsla(45, 75%, 90%, 1);
+}
+
+/*
+-------------------------------------------------------------------
+GALLERY
+-------------------------------------------------------------------
+*/
+
+h2 {
+	white-space: nowrap;
+	font-family: 'Licorice', cursive;
+	font-size: 4em;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	text-align: center;
+}
+
+#gallery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5vmin;
+	flex-wrap: wrap;
+	margin: 5vmin;
+}
+
+#gallery img {
+	width: 25vmin;
+	height: 35vmin;
+	flex-basis: 30vmin;
+	box-shadow: 0 0 20px #999;
+	object-fit: cover;
 }
 
 /*
