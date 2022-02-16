@@ -128,9 +128,9 @@ QUOTE
 
 #quote {
 	max-width: 100vw;
-    height: 30vh;
+    height: 25vh;
 	background-color: hsla(30, 75%, 90%, 1);
-	padding: 75px;
+	padding: 25px 75px;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
@@ -141,6 +141,7 @@ blockquote {
 	position: relative;
 	font-size: 1.5em;
 	text-align: center;
+	text-shadow: 1px 1px hsla(30, 75%, 70%, 1);;
 }
 
 blockquote:before, blockquote:after {
@@ -160,6 +161,28 @@ blockquote:after {
   content: "“";
   top: -70%;
   right: -4%;
+}
+
+/*
+-------------------------------------------------------------------
+LOCATION
+-------------------------------------------------------------------
+*/
+
+#location {
+    max-width: 100vw;
+    padding: 75px;
+    display: flex;
+    justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.card {
+	width: 25vw;
+	height: 35vw;
+	box-shadow: 0 0 20px #999;
+	background-color: hsla(0, 0%, 98%, 1);
 }
 
 /*
