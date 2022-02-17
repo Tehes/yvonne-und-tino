@@ -96,7 +96,7 @@ HERO
     max-width: 100vw;
     margin-top: 75px;
     padding: 5vmin;
-    background-color: hsla(45, 75%, 90%, 1);
+    background-color: hsla(136, 10%, 79%, 1);
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -137,7 +137,7 @@ QUOTE
 */
 #quote {
     max-width: 100vw;
-    background-color: hsla(30, 75%, 90%, 1);
+    background-color: hsla(3, 100%, 93%, 1);
     padding: 5vmin;
     display: flex;
     flex-direction: column;
@@ -149,7 +149,6 @@ blockquote {
     position: relative;
     font-size: 1.5em;
     text-align: center;
-    text-shadow: 1px 1px hsla(30, 75%, 70%, 1);
     padding: 6vmin;
 }
 
@@ -192,7 +191,7 @@ LOCATION
     min-width: 300px;
     max-width: 25%;
     box-shadow: 0 0 2vmin #999;
-    background-color: hsla(0, 0%, 98%, 1);
+    background-color: hsla(26, 41%, 97%, 1);
 }
 
 /*
