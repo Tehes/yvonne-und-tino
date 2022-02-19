@@ -25,11 +25,6 @@ body {
     padding: 0;
     color: var(--main-font-color);
     font-family: 'Cabin', sans-serif;
-<<<<<<< HEAD
-    overflow-x: hidden;
-=======
-    overflow: hidden;
->>>>>>> 4868a24eeb7c8b067316383ae38a67293ff3dec0
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -124,6 +119,7 @@ HERO
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #hero h2 {
@@ -147,10 +143,12 @@ HERO
     width: 20vmin;
 }
 
-#hero .flower1 {
+.flower1 {
+    position: absolute;
+    z-index: 999;
     width: 40vmin;
     left: -15vmin;
-    bottom: -15vmin;
+    top: 30vmin;
 }
 
 #hero .flower2 {
