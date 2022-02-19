@@ -25,7 +25,11 @@ body {
     padding: 0;
     color: var(--main-font-color);
     font-family: 'Cabin', sans-serif;
+<<<<<<< HEAD
     overflow-x: hidden;
+=======
+    overflow: hidden;
+>>>>>>> 4868a24eeb7c8b067316383ae38a67293ff3dec0
 }
 
 a:link, a:visited, a:hover, a:active {
