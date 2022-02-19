@@ -25,6 +25,7 @@ body {
     padding: 0;
     color: var(--main-font-color);
     font-family: 'Cabin', sans-serif;
+    overflow-x: hidden;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -140,7 +141,6 @@ HERO
 #hero img {
     position: absolute;
     width: 20vmin;
-    overflow: hidden;
 }
 
 #hero .flower1 {
