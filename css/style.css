@@ -25,7 +25,6 @@ body {
     padding: 0;
     color: var(--main-font-color);
     font-family: 'Cabin', sans-serif;
-    overflow-x: hidden;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -123,7 +122,7 @@ HERO
 }
 
 #hero h2 {
-    color: hsla(0, 100%, 100%, 0.8);
+    color: hsla(0, 100%, 100%, 1);
     font-size: 12vmin;
 }
 
@@ -141,49 +140,50 @@ HERO
 #hero img {
     position: absolute;
     width: 20vmin;
+    overflow: hidden;
 }
 
-#hero img:nth-of-type(1) {
+#hero .flower1 {
     width: 40vmin;
     left: -15vmin;
     bottom:-15vmin;
     clip-path: inset(0 0 0 15vmin);
 }
 
-#hero img:nth-of-type(2) {
+#hero .flower2 {
     top:5%;
     right:-7vmin;
     clip-path: inset(0 0 0 5vmin);
     transform: rotate(190deg);
 }
 
-#hero img:nth-of-type(3) {
+#hero .flower3 {
     bottom:8%;
     right:-4vmin;
-    clip-path: inset(0 4vmin 0 0);
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
     transform: rotate(-20deg);
 }
 
-#hero img:nth-of-type(4) {
+#hero .flower4 {
     right: -3vmin;
     bottom:-3vmin;
     clip-path: inset(0 3vmin 3vmin 0);
 }
 
-#hero img:nth-of-type(5) {
+#hero .flower5 {
     left: -3vmin;
     top:0;
     transform: rotate(40deg);
 }
 
-#hero img:nth-of-type(6) {
+#hero .flower6 {
     width: 8vmin;
     right: -1vmin;
     top:40%;
     transform: rotate(160deg);
 }
 
-#hero img:nth-of-type(7) {
+#hero .flower7 {
     width: 15vmin;
     left: -3vmin;
     top:30%;
