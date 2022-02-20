@@ -335,6 +335,10 @@ MEDIA QUERIES
     #hero {
         margin-top: 0;
     }
+	
+	.flower1 {
+		top: 66vmin;
+	}
 
     #quote {
         flex-direction: column;
