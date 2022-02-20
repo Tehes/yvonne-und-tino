@@ -303,13 +303,11 @@ h3 {
 MAP
 -------------------------------------------------------------------
 */
-#map iframe {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 50vmax;
-    max-width: 100vw;
+
+#map img {
+	width: 100%;
+	max-width: 100vw;
+	content-visibility: auto;
 }
 
 /*
