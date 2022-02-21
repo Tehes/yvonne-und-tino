@@ -228,12 +228,13 @@ QUOTE
 
 #quote img {
     width: 25%;
-    min-width: 300px;
+    margin: 0 5%;
+    min-width: 150px;
 }
 
 blockquote {
     position: relative;
-    font-size: 1.5em;
+    font-size: 2.5vmin;
     text-align: center;
     padding: 3vmin 1vmin;
     margin: 0 35px;
@@ -261,6 +262,7 @@ blockquote:after {
 cite {
     display: block;
     text-align: center;
+    font-size: 2vmin;
 }
 
 /*
@@ -381,5 +383,17 @@ MEDIA QUERIES
 
     #quote {
         flex-direction: column;
+    }
+
+    blockquote {
+        font-size: 4.5vmin;
+    }
+
+    blockquote:before, blockquote:after {
+        font-size: 4em;
+    }
+
+    cite {
+        font-size: 3.5vmin;
     }
 }
