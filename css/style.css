@@ -321,8 +321,21 @@ RSVP
 #rsvp {
     max-width: 100vw;
     padding: 5vmin;
-	height: 50vmin;
-	background-color: ;
+	display: flex;
+    justify-content: center;
+	flex-wrap: wrap;
+}
+
+input, textarea, button, select {
+	min-width: 300px;
+    max-width: 25%;
+	height: 3em;
+	margin: 5px 0 10px 0;
+}
+input[type='radio'] {
+	width: auto;
+	min-width: initial;
+	max-width: initial;
 }
 
 /*
@@ -334,8 +347,10 @@ KONTAKT
 #kontakt {
     max-width: 100vw;
     padding: 5vmin;
-	height: 50vmin;
 	background-color: hsla(136, 10%, 79%, 1);
+	display: flex;
+    justify-content: center;
+	flex-wrap: wrap;
 }
 
 /*
