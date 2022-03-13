@@ -6,8 +6,6 @@
 
 * {
     box-sizing: border-box;
-    touch-action: manipulation;
-    /* disable double tap to zoom */
 }
 
 html {
@@ -18,9 +16,6 @@ html {
 
 body {
     background-color: var(--main-bg-color);
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
     margin: 0;
     padding: 0;
     color: var(--main-font-color);
@@ -334,7 +329,8 @@ form {
 
 input, textarea, button, select {
     width: 100%;
-    border: 1px solid var(--main-font-color);;
+    border: 1px solid var(--main-font-color);
+    border-radius: 5px;
 	margin: 5px 0 10px 0;
     padding: 0.5em;
     font-size: 0.9em;
@@ -354,7 +350,6 @@ input[type='radio'] {
 
 button {
     border: 1px solid hsla(3, 100%, 83%, 1);
-    border-radius: 5px;
     color: #fff;
     cursor: grab;
     background-color: hsla(3, 100%, 83%, 1);
@@ -372,6 +367,27 @@ button:active {
 
 /*
 -------------------------------------------------------------------
+Geschenkwunsch
+-------------------------------------------------------------------
+*/
+
+#gift {
+    max-width: 100vw;
+    background-color: hsla(136, 10%, 79%, 1);
+    padding: 5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gift img {
+    width: 25%;
+    margin: 0 5%;
+    min-width: 150px;
+}
+
+/*
+-------------------------------------------------------------------
 KONTAKT
 -------------------------------------------------------------------
 */
@@ -379,7 +395,6 @@ KONTAKT
 #kontakt {
     max-width: 100vw;
     padding: 5vmin;
-	background-color: hsla(136, 10%, 79%, 1);
 	display: flex;
     justify-content: center;
 	flex-wrap: wrap;

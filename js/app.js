@@ -6,7 +6,7 @@ Imports
 Variables
 ---------------------------------------------------------------------------------------------------*/
 var contactForm = document.querySelector("#kontakt form");
-console.log(contactForm);
+console.log(contactForm[0]);
 
 /* --------------------------------------------------------------------------------------------------
 functions
@@ -18,7 +18,7 @@ function pickRecipient() {
 
 function init() {
     document.addEventListener("touchstart", function() {}, false);
-    document.addEventListener("change", pickRecipient, false);
+    contactForm[0].addEventListener("change", pickRecipient, false);
 }
 
 /* --------------------------------------------------------------------------------------------------
