@@ -22,6 +22,11 @@ body {
     font-family: 'Cabin', sans-serif;
 }
 
+p::selection, h2::selection, h1::selection, h3::selection, blockquote::selection, cite::selection {
+  background-color: hsla(3, 100%, 83%, 1);
+  color: #fff;
+}
+
 a:link, a:visited, a:hover, a:active {
     color: inherit;
     text-decoration: none;
@@ -258,6 +263,7 @@ cite {
     display: block;
     text-align: center;
     font-size: 2vmin;
+    margin-bottom: 2em;
 }
 
 /*
@@ -275,7 +281,7 @@ LOCATION
 }
 
 .card {
-    aspect-ratio: 1 / 1.4;
+    /* aspect-ratio: 1 / 1.4; */
     min-width: 300px;
     max-width: 25%;
     box-shadow: 0 0 1.5vmin #999;
@@ -284,7 +290,7 @@ LOCATION
 
 .card img {
     width: 100%;
-    height: 60%;
+    height: 50%;
     object-fit: cover;
     content-visibility: auto;
 }
@@ -293,6 +299,10 @@ h3 {
     margin: 10px;
     padding: 0;
     text-align: center;
+}
+
+#location p {
+    padding: 0 1em 1em 1em;
 }
 
 /*
@@ -381,7 +391,7 @@ Geschenkwunsch
 }
 
 #gift img {
-    width: 25%;
+    width: 60%;
     margin: 0 5%;
     min-width: 150px;
 }
@@ -398,6 +408,24 @@ KONTAKT
 	display: flex;
     justify-content: center;
 	flex-wrap: wrap;
+}
+
+#trauzeuginnen {
+    width: 20%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 1em;
+    margin-right: 3em;
+}
+
+#trauzeuginnen img {
+    width: 120px;
+}
+
+#trauzeuginnen p {
+    margin: 0 0 1em 0;
+    padding: 0;
 }
 
 /*
@@ -443,7 +471,7 @@ MEDIA QUERIES
 		top: 66vmin;
 	}
 
-    #quote {
+    #quote, #gift {
         flex-direction: column;
     }
 
@@ -457,5 +485,11 @@ MEDIA QUERIES
 
     cite {
         font-size: 3.5vmin;
+    }
+
+    #trauzeuginnen {
+        width: 100%;
+        flex-flow: row;
+        margin: 0;
     }
 }
