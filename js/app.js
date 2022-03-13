@@ -5,14 +5,20 @@ Imports
 /* --------------------------------------------------------------------------------------------------
 Variables
 ---------------------------------------------------------------------------------------------------*/
-
+var contactForm = document.querySelector("#kontakt form");
+console.log(contactForm);
 
 /* --------------------------------------------------------------------------------------------------
 functions
 ---------------------------------------------------------------------------------------------------*/
+function pickRecipient() {
+    contactForm.action = "https://formsubmit.co/"+event.target.value;
+}
+
 
 function init() {
     document.addEventListener("touchstart", function() {}, false);
+    document.addEventListener("change", pickRecipient, false);
 }
 
 /* --------------------------------------------------------------------------------------------------

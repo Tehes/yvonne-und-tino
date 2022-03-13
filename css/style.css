@@ -326,16 +326,48 @@ RSVP
 	flex-wrap: wrap;
 }
 
-input, textarea, button, select {
-	min-width: 300px;
-    max-width: 25%;
-	height: 3em;
-	margin: 5px 0 10px 0;
+form {
+    width: 100%;
+    min-width: 300px;
+    max-width: 40vw;
 }
+
+input, textarea, button, select {
+    width: 100%;
+    border: 1px solid var(--main-font-color);;
+	margin: 5px 0 10px 0;
+    padding: 0.5em;
+    font-size: 0.9em;
+    vertical-align: middle;
+    outline: none;
+}
+
+textarea {
+    height: 6em;
+}
+
 input[type='radio'] {
 	width: auto;
 	min-width: initial;
 	max-width: initial;
+}
+
+button {
+    border: 1px solid hsla(3, 100%, 83%, 1);
+    border-radius: 5px;
+    color: #fff;
+    cursor: grab;
+    background-color: hsla(3, 100%, 83%, 1);
+}
+
+button:hover {
+    color: var(--main-font-color);
+}
+
+button:active {
+    cursor: grabbing;
+    color: var(--main-font-color);
+    background-color: var(--header-bg);
 }
 
 /*
