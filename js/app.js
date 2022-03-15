@@ -41,7 +41,6 @@ function addNameFields() {
 
 
 function init() {
-    document.addEventListener("touchstart", function() {}, false);
     contactForm[0].addEventListener("change", pickRecipient, false);
 	selectAdults.addEventListener("change", addNameFields, false);
 	selectChildren.addEventListener("change", addNameFields, false);
