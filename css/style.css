@@ -347,6 +347,7 @@ input, textarea, button, select {
     font-size: 0.9em;
     vertical-align: middle;
     outline: none;
+	background-color: hsla(26, 41%, 97%, 1);
 }
 
 textarea {
