@@ -29,7 +29,7 @@ function addNameFields() {
 		newInput.type = "text";
 		newInput.className = event.target.id;
 		newInput.name = event.target.id;
-		newInput.placeholder = "Name für Tischkarte";
+		newInput.placeholder = "Name";
 		newInput.required = true;
 		document.querySelector("#"+event.target.id).after(newInput);
 	}
