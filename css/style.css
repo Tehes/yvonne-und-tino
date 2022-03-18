@@ -212,6 +212,10 @@ GALLERY
     content-visibility: auto;
 }
 
+#gallery .positionleft {
+	object-position: 20% 0;
+}
+
 /*
 -------------------------------------------------------------------
 QUOTE
