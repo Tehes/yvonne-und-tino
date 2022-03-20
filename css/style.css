@@ -339,11 +339,15 @@ MAP
 	content-visibility: auto;
 }
 
+.no_scroll {
+  pointer-events: none;
+}
+
 #adress {
     position: absolute;
-    top: 4%;
-    left: 3%;
-    padding: 1.5vmin;
+    bottom: 15px;
+    left: 15px;
+    padding: 1vmin;
     background-color: var(--header-bg);
     font-size: 1.5vmin;
     box-shadow: 0 0 0.8vmin #999;
