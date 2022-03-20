@@ -43,7 +43,9 @@ function addNameFields() {
 function init() {
     contactForm[0].addEventListener("change", pickRecipient, false);
 	selectAdults.addEventListener("change", addNameFields, false);
-	selectChildren.addEventListener("change", addNameFields, false);
+	if (selectChildren) { 
+		selectChildren.addEventListener("change", addNameFields, false);
+	}
 }
 
 /* --------------------------------------------------------------------------------------------------
