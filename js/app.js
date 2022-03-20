@@ -64,8 +64,10 @@ function init() {
 	if (selectChildren) {
 		selectChildren.addEventListener("change", addNameFields, false);
 	}
-	osm.parentElement.addEventListener("click", activateMap, false);
-	window.addEventListener("scroll", deactivateMap, false);
+	if (osm) {
+		osm.parentElement.addEventListener("click", activateMap, false);
+		window.addEventListener("scroll", deactivateMap, false);
+	}
 }
 
 /* --------------------------------------------------------------------------------------------------
