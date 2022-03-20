@@ -331,14 +331,19 @@ MAP
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: hsla(0, 100%, 100%, 0.40);
-    display: none;
+    background-color: hsla(0, 0%, 0%, 0.40);
+    color: #fff;
+    font-size: 1.5em;
+    display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    z-index: 10;
+    transition: all 0.5s;
 }
 
 #map:hover #map-cta {
-    display: flex;
+    opacity: 1;
 }
 
 #map img {
@@ -367,6 +372,7 @@ MAP
     background-color: var(--header-bg);
     font-size: 1.5vmin;
     box-shadow: 0 0 0.8vmin #999;
+    z-index: 20;
 }
 
 /*
