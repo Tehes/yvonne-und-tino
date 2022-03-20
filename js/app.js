@@ -8,7 +8,6 @@ Variables
 var contactForm = document.querySelector("#kontakt form");
 var selectAdults = document.querySelector("#adults");
 var selectChildren = document.querySelector("#children");
-var osm = document.querySelector("#osm");
 
 /* --------------------------------------------------------------------------------------------------
 functions
@@ -41,10 +40,14 @@ function addNameFields() {
 }
 
 function activateScroll() {
+    var osm = document.querySelector("#osm");
+    var mapCta = document.querySelector("#map-cta");
     osm.classList.remove("no_scroll");
+    mapCta.remove();
 }
 
 function deactivateScroll() {
+    var osm = document.querySelector("#osm");
     osm.classList.add("no_scroll");
 }
 
@@ -55,10 +58,8 @@ function init() {
 	if (selectChildren) {
 		selectChildren.addEventListener("change", addNameFields, false);
 	}
-    if (osm) {
-		document.body.addEventListener("click", activateScroll, false);
-		window.addEventListener("scroll", deactivateScroll, false);
-	}
+	document.body.addEventListener("click", activateScroll, false);
+	window.addEventListener("scroll", deactivateScroll, false);
 }
 
 /* --------------------------------------------------------------------------------------------------
