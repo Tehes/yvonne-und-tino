@@ -8,6 +8,7 @@ Variables
 var contactForm = document.querySelector("#kontakt form");
 var selectAdults = document.querySelector("#adults");
 var selectChildren = document.querySelector("#children");
+var osm = document.querySelector("#osm");
 
 /* --------------------------------------------------------------------------------------------------
 functions
@@ -39,16 +40,21 @@ function addNameFields() {
 	}
 }
 
-function activateScroll() {
-    var osm = document.querySelector("#osm");
+function activateMap() {
     var mapCta = document.querySelector("#map-cta");
     osm.classList.remove("no_scroll");
     mapCta.remove();
 }
 
-function deactivateScroll() {
-    var osm = document.querySelector("#osm");
-    osm.classList.add("no_scroll");
+function deactivateMap() {
+	var mapCta = document.querySelector("#map-cta");
+	if (!mapCta) {
+		mapCta = document.createElement("div");
+		mapCta.id = "map-cta";
+		mapCta.textContent = "Klicken um Karte zu aktivieren";
+		osm.parentElement.append(mapCta);
+    	osm.classList.add("no_scroll");
+	}
 }
 
 
@@ -58,8 +64,8 @@ function init() {
 	if (selectChildren) {
 		selectChildren.addEventListener("change", addNameFields, false);
 	}
-	document.body.addEventListener("click", activateScroll, false);
-	window.addEventListener("scroll", deactivateScroll, false);
+	osm.parentElement.addEventListener("click", activateMap, false);
+	window.addEventListener("scroll", deactivateMap, false);
 }
 
 /* --------------------------------------------------------------------------------------------------
