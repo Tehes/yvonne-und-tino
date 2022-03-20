@@ -231,9 +231,11 @@ QUOTE
 }
 
 #quote img {
+    flex: 0 0 auto;
     width: 25%;
     margin: 0 5%;
     min-width: 150px;
+    max-width: 250px;
 	content-visibility: auto;
 }
 
@@ -423,9 +425,11 @@ GESCHENKWUNSCH
 }
 
 #gift img {
-    width: 60%;
-    margin: 0 5%;
+    flex: 0 0 auto;
+    width: 30%;
+    margin: 2% 5%;
     min-width: 150px;
+    max-height: 250px;
 	content-visibility: auto;
 }
 
@@ -484,12 +488,6 @@ footer {
 MEDIA QUERIES
 -------------------------------------------------------------------
 */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --main-bg-color: #111;
-        --main-font-color: #CCC;
-    }
-}
 
 @media only screen and (max-width: 450px) and (orientation: portrait) {
     header {
