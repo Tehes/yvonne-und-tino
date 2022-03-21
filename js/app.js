@@ -59,6 +59,7 @@ function deactivateMap() {
 
 
 function init() {
+	document.addEventListener("touchstart", function(){}, true);
     contactForm[0].addEventListener("change", pickRecipient, false);
 	selectAdults.addEventListener("change", addNameFields, false);
 	if (selectChildren) {

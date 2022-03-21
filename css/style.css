@@ -342,7 +342,7 @@ MAP
     transition: all 0.5s;
 }
 
-#map:hover #map-cta {
+#map:hover #map-cta, #map:active #map-cta {
     opacity: 1;
 }
 
