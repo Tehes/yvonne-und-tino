@@ -1,14 +1,14 @@
 :root {
-	--achromatic: 0, 0%;
+    --achromatic: 0, 0%;
     --main-bg-color: hsl(var(--achromatic), 100%);
     --main-font-color: hsl(var(--achromatic), 33%);
     --header-bg: hsla(var(--achromatic), 100%, 0.95);
-	
-	--primary-color: hsla(3, 100%, 83%, 1);
-	--primary-color-light: hsla(3, 100%, 93%, 1);
-	--secondary-color: hsla(136, 10%, 79%, 1);
-	
-	--rounded-borders: 5px;
+    --shadow-color: hsl(var(--achromatic), 60%);
+    --border-color: hsl(var(--achromatic), 70%);
+    --primary-color: hsla(3, 100%, 83%, 1);
+    --primary-color-light: hsla(3, 100%, 93%, 1);
+    --secondary-color: hsla(136, 10%, 79%, 1);
+    --rounded-borders: 5px;
 }
 
 * {
@@ -30,8 +30,8 @@ body {
 }
 
 p::selection, h2::selection, h1::selection, h3::selection, blockquote::selection, cite::selection {
-  background-color: var(--primary-color);
-  color: hsl(var(--achromatic), 100%);
+    background-color: var(--primary-color);
+    color: hsl(var(--achromatic), 100%);
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -53,6 +53,11 @@ h2 {
     text-align: center;
 }
 
+section {
+    padding: 5vmin;
+    max-width: 100vw;
+}
+
 /*
 -------------------------------------------------------------------
 HEADER
@@ -66,9 +71,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     background-color: var(--header-bg);
-    box-shadow: 0 15px 12px -12px #999;
+    box-shadow: 0 15px 12px -12px var(--shadow-color);
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -118,9 +124,7 @@ HERO
 */
 #hero {
     position: relative;
-    max-width: 100vw;
     height: 60vmin;
-    padding: 5vmin;
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
@@ -136,7 +140,7 @@ HERO
 
 #hero h3 {
     padding: 1vmin 0;
-    color: hsla(0, 100%, 100%, 0.7);
+    color: hsla(var(--achromatic), 100%, 0.7);
     font-size: 3vmin;
     font-weight: 100;
     text-transform: uppercase;
@@ -206,21 +210,20 @@ GALLERY
     align-items: center;
     gap: 6vmin;
     flex-wrap: wrap;
-    margin: 5vmin;
 }
 
 #gallery img {
     max-width: 25%;
     min-width: 140px;
     aspect-ratio: 1 / 1.2;
-    box-shadow: 0 0 1.5vmin #999;
+    box-shadow: 0 0 1.5vmin var(--shadow-color);
     object-fit: cover;
     padding: 1%;
     content-visibility: auto;
 }
 
 #gallery .positionleft {
-	object-position: 20% 0;
+    object-position: 20% 0;
 }
 
 /*
@@ -229,9 +232,7 @@ QUOTE
 -------------------------------------------------------------------
 */
 #quote {
-    max-width: 100vw;
     background-color: var(--primary-color-light);
-    padding: 5vmin;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,7 +244,7 @@ QUOTE
     margin: 0 5%;
     min-width: 150px;
     max-width: 250px;
-	content-visibility: auto;
+    content-visibility: auto;
 }
 
 blockquote {
@@ -286,8 +287,6 @@ LOCATION
 -------------------------------------------------------------------
 */
 #location {
-    max-width: 100vw;
-    padding: 5vmin;
     display: flex;
     justify-content: center;
     gap: 5vmin;
@@ -297,7 +296,7 @@ LOCATION
 .card {
     min-width: 300px;
     max-width: 25%;
-    box-shadow: 0 0 1.5vmin #999;
+    box-shadow: 0 0 1.5vmin var(--shadow-color);
     background-color: hsla(26, 41%, 97%, 1);
 }
 
@@ -313,7 +312,7 @@ LOCATION
 }
 
 h3 {
-    margin: 10px;
+    margin: 1em;
     padding: 0;
     text-align: center;
 }
@@ -327,9 +326,9 @@ h3 {
 MAP
 -------------------------------------------------------------------
 */
-
 #map {
     position: relative;
+    padding: 0;
 }
 
 #map-cta {
@@ -339,7 +338,7 @@ MAP
     width: 100%;
     height: 100%;
     background-color: hsla(var(--achromatic), 0%, 0.40);
-    color: #fff;
+    color: hsl(var(--achromatic), 100%);
     font-size: 1.5em;
     display: flex;
     align-items: center;
@@ -354,21 +353,21 @@ MAP
 }
 
 #map img {
-	width: 100%;
-	max-width: 100vw;
-	content-visibility: auto;
+    width: 100%;
+    max-width: 100vw;
+    content-visibility: auto;
 }
 
 #map iframe {
     border: none;
     width: 100%;
     height: 50vh;
-	max-width: 100vw;
-	content-visibility: auto;
+    max-width: 100vw;
+    content-visibility: auto;
 }
 
 .no_scroll {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 #adress {
@@ -378,7 +377,7 @@ MAP
     padding: 1vmin;
     background-color: var(--header-bg);
     font-size: 1.5vmin;
-    box-shadow: 0 0 0.8vmin #999;
+    box-shadow: 0 0 0.8vmin var(--shadow-color);
     z-index: 20;
 }
 
@@ -387,13 +386,10 @@ MAP
 RSVP
 -------------------------------------------------------------------
 */
-
 #rsvp {
-    max-width: 100vw;
-    padding: 5vmin;
-	display: flex;
+    display: flex;
     justify-content: center;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 form {
@@ -404,15 +400,15 @@ form {
 
 input, textarea, button, select {
     width: 100%;
-    border: 1px solid #BBB;
+    border: 1px solid var(--border-color);
     border-radius: var(--rounded-borders);
-	margin: 5px 0 10px 0;
+    margin: 5px 0 10px 0;
     padding: 0.5em;
     font-size: 0.9em;
     vertical-align: middle;
     outline: none;
-	background-color: hsla(26, 41%, 97%, 1);
-	color: var(--main-font-color);
+    background-color: hsla(26, 41%, 97%, 1);
+    color: var(--main-font-color);
 }
 
 textarea {
@@ -420,14 +416,14 @@ textarea {
 }
 
 input[type='radio'] {
-	width: auto;
-	min-width: initial;
-	max-width: initial;
+    width: auto;
+    min-width: initial;
+    max-width: initial;
 }
 
 button {
     border: 1px solid var(--primary-color);
-    color: #fff;
+    color: hsl(var(--achromatic), 100%);
     cursor: grab;
     background-color: var(--primary-color);
 }
@@ -447,11 +443,8 @@ button:active {
 GESCHENKWUNSCH
 -------------------------------------------------------------------
 */
-
 #gift {
-    max-width: 100vw;
     background-color: var(--secondary-color);
-    padding: 5vmin;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -463,7 +456,7 @@ GESCHENKWUNSCH
     margin: 2% 5%;
     min-width: 150px;
     max-height: 250px;
-	content-visibility: auto;
+    content-visibility: auto;
 }
 
 /*
@@ -471,13 +464,10 @@ GESCHENKWUNSCH
 KONTAKT
 -------------------------------------------------------------------
 */
-
 #kontakt {
-    max-width: 100vw;
-    padding: 5vmin;
-	display: flex;
+    display: flex;
     justify-content: center;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 #trauzeuginnen {
@@ -491,8 +481,8 @@ KONTAKT
 
 #trauzeuginnen img {
     width: 120px;
-	content-visibility: auto;
-    border: 1px solid #BBB;
+    content-visibility: auto;
+    border: 1px solid var(--border-color);
 }
 
 #trauzeuginnen p {
@@ -505,14 +495,12 @@ KONTAKT
 FOOTER
 -------------------------------------------------------------------
 */
-
 footer {
-    max-width: 100vw;
     padding: 0.5vmin 2vmin;
     display: flex;
     justify-content: space-between;
-	background-color: hsla(var(--achromatic), 20%, 1);
-    color: hsla(26, 41%, 97%, 0.7);
+    background-color: hsla(var(--achromatic), 20%, 1);
+    color: hsl(var(--achromatic), 70%);
     font-size: 0.9em;
 }
 
@@ -521,11 +509,14 @@ footer {
 MEDIA QUERIES
 -------------------------------------------------------------------
 */
-
 @media only screen and (max-width: 450px) and (orientation: portrait) {
     header {
         position: relative;
         flex-direction: column;
+    }
+
+    h2 {
+        font-size: 10vmin;
     }
 
     ul {
@@ -536,9 +527,9 @@ MEDIA QUERIES
         margin-top: 0;
     }
 
-	.flower1 {
-		top: 66vmin;
-	}
+    .flower1 {
+        top: 66vmin;
+    }
 
     #quote, #gift {
         flex-direction: column;
