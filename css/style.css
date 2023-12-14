@@ -254,6 +254,7 @@ blockquote {
     text-align: center;
     padding: 3vmin 1vmin;
     margin: 0 35px;
+    text-wrap: balance;
 }
 
 blockquote:before, blockquote:after {
